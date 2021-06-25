@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/cal.css">
+</head>
+<body style="width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div class="info__back">
+        <a href="./index.html" class="info__back-link">
+            Trang chủ
+        </a>
+    </div>
+    <table border="0" width = "500px" height = "500px">
+        <tr>
+            <td colspan="4" style="height: 100px;">
+                <form action="">
+                    <input type="text" id="result" style="width: 500px; height: 100px; font-size: 2rem; padding-left: 15px;">
+                </form>
+            </td>
+        </tr>
+        <tr>
+            <td><button value="C" onclick="reset()" style="width: 100%; height: 100%; font-size: 2rem;">C</button></td>
+            <td><button value="<-" onclick="back()" style="width: 100%; height: 100%; font-size: 2rem;"><-</button></td>
+            <td><button value="/" onclick="insert('/')" style="width: 100%; height: 100%; font-size: 2rem;">/</button></td>
+            <td><button value="*" onclick="insert('*')" style="width: 100%; height: 100%; font-size: 2rem;">*</button></td>
+        </tr>
+        <tr>
+            <td><button value="1" onclick="insert('1')" style="width: 100%; height: 100%; font-size: 2rem;">1</button></td>
+            <td><button value="2" onclick="insert('2')" style="width: 100%; height: 100%; font-size: 2rem;">2</button></td>
+            <td><button value="3" onclick="insert('3')" style="width: 100%; height: 100%; font-size: 2rem;">3</button></td>
+            <td><button value="-" onclick="insert('-')" style="width: 100%; height: 100%; font-size: 2rem;">-</button></td>
+        </tr>
+        <tr>
+            <td><button value="4" onclick="insert('4')" style="width: 100%; height: 100%; font-size: 2rem;">4</button></td>
+            <td><button value="5" onclick="insert('5')" style="width: 100%; height: 100%; font-size: 2rem;">5</button></td>
+            <td><button value="6" onclick="insert('6')" style="width: 100%; height: 100%; font-size: 2rem;">6</button></td>
+            <td><button value="+" onclick="insert('+')" style="width: 100%; height: 100%; font-size: 2rem;">+</button></td>
+        </tr>
+        <tr>
+            <td><button value="7" onclick="insert('7')" style="width: 100%; height: 100%; font-size: 2rem;">7</button></td>
+            <td><button value="8" onclick="insert('8')" style="width: 100%; height: 100%; font-size: 2rem;">8</button></td>
+            <td><button value="9" onclick="insert('9')" style="width: 100%; height: 100%; font-size: 2rem;">9</button></td>
+            <td rowspan="2"><button value="=" onclick="equal()" style="width: 100%; height: 100%; font-size: 2rem;">=</button></td>
+        </tr>
+        <tr>
+            <td colspan="2"><button value="0" onclick="insert('0')" style="width: 100%; height: 100%; font-size: 2rem;">0</button></td>
+            <td><button value="." onclick="insert('.')" style="width: 100%; height: 100%; font-size: 2rem;">.</button></td>
+        </tr>
+    </table>
+
+
+    <script>
+        var input = document.querySelector('#result')
+
+        // Điền số ----------------------- 
+        function insert(num){result.value += num}
+
+        // Phép bằng ---------------------
+        function equal(){
+            if(input) {input.value = eval(input.value)} 
+            else {input.value = ''}}
+
+        // Reset ----------------------- 
+        function reset(){input.value = ''}
+
+        // Xóa số -----------------------
+        function back(){input.value = input.value.substring(0, input.value.length - 1)} 
+
+    </script>
+</body>
+</html>

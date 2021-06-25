@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/dang_nhap.css">
+</head>
+<body>
+    <div class="container">
+        <div class="info__back">
+            <a href="./index.html" class="info__back-link">
+                Trang chủ
+            </a>
+        </div>
+        <form action="">
+            
+            <div class="name item">
+                <label for="" class="title">Tên đăng nhập</label>
+                <input type="text" placeholder="Nhập tên" id="name">
+                <label for="">*</label>
+            </div>
+            <div class="password item">
+                <label for="" class="title">Mật khẩu</label>
+                <input type="password" placeholder="Nhập mật khẩu" id="password">
+                <label for="">*</label>
+                <label for="" class="forget"><a href="">* Quên mật khẩu hả?</a></label>
+            </div>
+            <div class="submit">
+                <button type="submit" id="submit" onclick="dangNhap()">Submit</button>
+                <input type="checkbox" class="checkbox">
+                <label for="" class="checkbox_text">Lưu đăng nhập</label>
+            </div>
+        </form>
+    </div>
+
+
+    <script>
+        var namee = document.querySelector('#name')
+        var password = document.querySelector('#password')
+
+        function dangNhap() {
+            if ( namee.value == 'admin' && password.value == 'admin') {
+                alert('OKE')
+            } else {
+                alert('Đăng nhập không được!')
+            }
+        } 
+    </script>
+</body>
+</html>
