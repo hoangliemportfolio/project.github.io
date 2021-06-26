@@ -238,7 +238,6 @@ will-change: transform;        /* Example of <custom-ident> */
     font-size: 2rem;
     color: rgb(43, 43, 43);
     transition: ease-in-out 0.3s;
-    padding: 5px 10px;
     line-height: 100%;
 }
 
@@ -255,7 +254,7 @@ will-change: transform;        /* Example of <custom-ident> */
 }
 
 .list-title span {
-    color: rgb(87, 79, 69);
+    color: rgb(85, 83, 80);
     font-size: 3rem;
     letter-spacing: 7px;
     font-family: Neucha;
