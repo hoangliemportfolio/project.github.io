@@ -28,19 +28,24 @@
 
 @keyframes appear1 {
     0% {
-        opacity: 0;
-        transform: translateY(-30px);
+        
+        transform: translateY(-100px);
         width: 30%;
+
+        opacity: 0;
     }
 
-    20%{
+    70%{
         transform: translateY(0);
+        opacity: 0.7;
+        width: 100%;
     }
   
     100% {
-        opacity: 1;
+       
         transform: translateY(0);
         width: 100%;
+        opacity: 1;
     }
 }
 
@@ -250,7 +255,7 @@ body {
     20% {
         transform: translateY(0px);
         box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
-        filter: brightness(90%);
+        filter: brightness(100%);
     }
     30% {
         transform: translateY(-10px);
@@ -260,7 +265,7 @@ body {
     40% {
         transform: translateY(0px);
         box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
-        filter: brightness(90%);
+        filter: brightness(100%);
     }
     50% {
         transform: translateY(-10px);
@@ -271,7 +276,7 @@ body {
     60% {
         transform: translateY(0px);
         box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
-        filter: brightness(90%);
+        filter: brightness(100%);
     }
     70% {
         transform: translateY(-10px);
@@ -281,7 +286,7 @@ body {
     80% {
         transform: translateY(0px);
         box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
-        filter: brightness(90%);
+        filter: brightness(100%);
     }
     90% {
         transform: translateY(-10px);
@@ -290,7 +295,7 @@ body {
     }
     100% {
         transform: translateY(0px);
-        filter: brightness(90%);
+        filter: brightness(100%);
         
         
     }
@@ -482,9 +487,9 @@ will-change: transform;        /* Example of <custom-ident> */
     border-radius: 9px;
 }
 
-/* .card-link a:hover {
+.card-link a:hover {
     letter-spacing: 2px;
-} */
+}
 
 .list-title {
 
