@@ -30,10 +30,16 @@
     0% {
         opacity: 0;
         transform: translateY(30px);
+        width: 30%;
+    }
+
+    60% {
+        width: 90%;
     }
     100% {
         opacity: 1;
         transform: translateY(0);
+        width: 90%;
     }
 }
 
@@ -126,6 +132,10 @@ body {
     justify-content: space-evenly;
     /* perspective: 1000px; */
     animation: appear1 ease-in-out 1.4s;
+    will-change: auto;
+    will-change: scroll-position;
+    will-change: contents;
+    will-change: transform; 
 }
 
 .card-wrap{
