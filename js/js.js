@@ -67,7 +67,7 @@ function flip3() {
     for ( var i = 0; i < card3.length; i++ ) {
         card3[i].classList.remove('flip3')
     }
-    setTimeout(flip3, 7500)
+    setTimeout(flip3, 6600)
     }
 flip3()
 
@@ -78,7 +78,7 @@ function flip4() {
     for ( var i = 0; i < card4.length; i++ ) {
         card4[i].classList.remove('flip4')
     }
-    setTimeout(flip4, 7400)
+    setTimeout(flip4, 7000)
     }
 flip4()
 
@@ -88,7 +88,7 @@ function flip5() {
     for ( var i = 0; i < card5.length; i++ ) {
         card5[i].classList.remove('flip5')
     }
-    setTimeout(flip5, 6900)
+    setTimeout(flip5, 6500)
     }
 flip5()
 
