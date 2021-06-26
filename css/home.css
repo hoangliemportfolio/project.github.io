@@ -8,6 +8,81 @@
     src: url(../fonts/Quicksand-Regular.ttf);
 }
 
+@font-face {
+    font-family: Neucha;
+    src: url(../fonts/Neucha-Regular.ttf);
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes textt {
+    0% {
+        top:0;
+        
+    }
+    20% {
+        top: -25px;
+    }
+    40% {
+        top: -5px;
+    }
+    60% {
+        top: -25px;
+    }
+    80% {
+        top: -5px;
+    }
+    100% {
+        top:unset;
+        
+    }
+}
+/* */
+@keyframes glow {
+    0% {
+        box-shadow: unset;
+        
+    }
+    20% {
+        
+        filter: brightness(110%);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+    }
+    40% {
+        
+        filter: brightness(90%);
+       box-shadow: 0px 0px 20px 5px rgba(0, 255, 255,0.2);
+    }
+    60% {
+        
+        filter: brightness(110%);
+        box-shadow: 0px 0px 20px 5px rgba(0, 255, 255, 0.5);
+    }
+    80% {
+        
+        filter: brightness(90%);
+        box-shadow: 0px 0px 20px 5px rgba(0, 255, 255,0.2);
+    
+    }
+    100% {
+        
+        filter: brightness(100%);
+        box-shadow: 0px 0px 20px 5px rgba(0, 255, 255,0.1);
+    
+    }
+} 
+
 body {
     width: 100%;
     height: 100vh;
@@ -15,6 +90,9 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .container {
@@ -24,44 +102,162 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url(../img/home_bg.jpg);
-    background-size: cover;
 }
 
-span {
-    font-size: 3.5rem;
-    color: rgb(34, 34, 34);
-    font-family: Poppins;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+.background {
+    width: 100%;
+    height: 100%;
+}
+
+.background .background-item{
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: appear ease-in-out 4s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-itemi{
+    width: 100%;
+    height: 100%;
+}
+
+.background-item.active {
+    display: block;
 }
 
 .list {
+    position: absolute;
+    z-index: 2;
+    margin-top: 200px;
     display: flex;
-    list-style: none;
-    padding: 0;
-    justify-content: space-around;
+    width: 90%;
+    height: 300px;
+    justify-content: space-evenly;
+    /* perspective: 1000px; */
 }
 
-.list li {
-    width: 200px;
+.card-wrap{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* .card-wrap:hover {
+  animation: textt ease-in-out 7s infinite;
+  will-change: auto;
+  will-change: scroll-position;
+  will-change: contents;
+  will-change: transform; 
+} */
+
+.card-wrap:hover img {
+    animation:  glow ease-in-out 7s infinite;
+}
+
+
+
+/* .flip-card-back:hover a{
+    animation: glow ease-in-out 7s infinite;    
+    will-change: auto;
+will-change: scroll-position;
+will-change: contents;
+will-change: transform;        /* Example of <custom-ident> */
+
+.card-wrap div img {
+    height: 300px;
+    width: 180px;
+    cursor: pointer;
+    border-radius: 9px;
+}
+
+
+/* .flip-card-front img:hover {
+    animation: glow ease-in-out 7s infinite;
+}
+
+.flip-card-back img:hover {
+    animation: glow ease-in-out 7s infinite;
+  } */
+  
+
+.card-wrap.flip1 {
+    transform: rotatey(-180deg);
+}
+
+.card-wrap.flip2 {
+    transform: rotatey(-180deg);
+}
+
+.card-wrap.flip3 {
+    transform: rotatey(-180deg);
+}
+
+.card-wrap.flip4 {
+    transform: rotatey(-180deg);
+}
+
+.card-wrap.flip5 {
+    transform: rotatey(-180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    cursor: pointer;
+    border-radius: 9px;
+  }
+
+  .flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+  }
+
+.card-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.linkk {
-    text-align: center;
+.card-link a{
     text-decoration: none;
-    color: white;
-    padding: 10px 20px;
-    background-color: rgb(34, 34, 34);
-    border-radius: 50px;
-    font-family: Quicksand;
-    /* margin-right: 50px; */
+    font-family: Neucha;
+    font-size: 2rem;
+    color: rgb(43, 43, 43);
     transition: ease-in-out 0.3s;
+    padding: 5px 10px;
+    line-height: 100%;
 }
 
-.linkk:hover {
+.card-link a:hover {
     letter-spacing: 2px;
-    background-color: rgb(6, 18, 51);
+}
+
+.list-title {
+
+    position: absolute;
+    top: 40px;
+    left: auto;
+    right: auto;
+}
+
+.list-title span {
+    color: rgb(87, 79, 69);
+    font-size: 3rem;
+    letter-spacing: 7px;
+    font-family: Neucha;
+
 }
