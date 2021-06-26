@@ -266,7 +266,7 @@ will-change: transform;        /* Example of <custom-ident> */
 }
 
 .list-title span {
-    color: rgb(85, 83, 80);
+    color: rgba(121, 156, 185, 0.3);
     font-size: 3rem;
     letter-spacing: 7px;
     font-family: Neucha;
