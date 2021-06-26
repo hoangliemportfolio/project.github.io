@@ -29,17 +29,18 @@
 @keyframes appear1 {
     0% {
         opacity: 0;
-        transform: translateY(30px);
+        transform: translateY(-30px);
         width: 30%;
     }
 
-    60% {
-        width: 90%;
+    20%{
+        transform: translateY(0);
     }
+  
     100% {
         opacity: 1;
         transform: translateY(0);
-        width: 90%;
+        width: 100%;
     }
 }
 
@@ -127,10 +128,12 @@ body {
 .list {
     position: absolute;
     z-index: 2;
-    margin-top: 200px;
+    margin-top: 0px;
     display: flex;
-    width: 90%;
-    height: 300px;
+    padding: 310px 100px 0 100px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 700px;
     justify-content: space-evenly;
     /* perspective: 1000px; */
     animation: appear1 ease-in-out 1.4s;
@@ -139,6 +142,51 @@ body {
     will-change: contents;
     will-change: transform; 
 }
+
+
+
+
+
+
+.list:hover .card-wrap img{
+    animation: fly2 ease-in-out 15s 1s infinite; 
+}
+.list:hover .card-wrap span{
+    animation: fly3 ease-in-out 15s 1s infinite;
+}
+
+.list:hover .card-wrap img.style1{
+    animation: fly2 ease-in-out 15s infinite;  
+}
+.list:hover .card-wrap span.style1{
+    animation: fly3 ease-in-out 15s infinite;
+}
+
+.list:hover .card-wrap img.style2{
+    animation: fly2 ease-in-out 15s 0.5s infinite;  
+}
+.list:hover .card-wrap span.style2{
+    animation: fly3 ease-in-out 15s 0.5s infinite;
+}
+
+.list:hover .card-wrap img.style3{
+    animation: fly2 ease-in-out 15s 0.2s infinite;  
+}
+.list:hover .card-wrap span.style3{
+    animation: fly3 ease-in-out 15s 0.2s infinite;
+}
+
+.list:hover .card-wrap img.style4{
+    animation: fly2 ease-in-out 15s 0.3s infinite;  
+}
+.list:hover .card-wrap span.style4{
+    animation: fly3 ease-in-out 15s 0.3s infinite;
+}
+
+
+
+
+
 
 @keyframes fly {
     0% {
@@ -189,6 +237,107 @@ body {
     }
 }
 
+@keyframes fly2 {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    10% {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+        filter: brightness(120%);
+    }
+    20% {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
+        filter: brightness(90%);
+    }
+    30% {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+        filter: brightness(120%);
+    }
+    40% {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
+        filter: brightness(90%);
+    }
+    50% {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+        filter: brightness(120%);
+        
+    }
+    60% {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
+        filter: brightness(90%);
+    }
+    70% {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+        filter: brightness(120%);
+    }
+    80% {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.1);
+        filter: brightness(90%);
+    }
+    90% {
+        transform: translateY(-10px);
+        box-shadow: 0px 0px 20px 5px rgba(32, 114, 146, 0.5);
+        filter: brightness(120%);
+    }
+    100% {
+        transform: translateY(0px);
+        filter: brightness(90%);
+        
+        
+    }
+}
+
+@keyframes fly3 {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    10% {
+        transform: translateY(-10px);
+        
+    }
+    20% {
+        transform: translateY(0px);
+        
+    }
+    30% {
+        transform: translateY(-10px);
+    }
+    40% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+        
+    }
+    60% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(-10px);
+    }
+    80% {
+        transform: translateY(0px);
+    }
+    90% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+        
+        
+    }
+}
+
 
 .card-wrap{
     position: relative;
@@ -216,10 +365,14 @@ body {
   will-change: transform; 
 } */
 
-.card-wrap:hover img {
-     animation:  glow ease-in-out 7s infinite;
-   transition: ease-in-out 0.3s;
+/* @keyframes haha {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(50px);}
 }
+.card-wrap:hover img {
+     animation:  haha ease-in-out 3s infinite;
+   transition: ease-in-out 0.3s;
+} */
 
 
 
@@ -292,7 +445,7 @@ will-change: transform;        /* Example of <custom-ident> */
 .flip-card-front, .flip-card-back {
     position: absolute;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     -webkit-backface-visibility: hidden; 
     backface-visibility: hidden;
     cursor: pointer;
@@ -316,6 +469,7 @@ will-change: transform;        /* Example of <custom-ident> */
     justify-content: center;
     align-items: center;
     border-radius: 9px;
+    padding-bottom: 50px;
 }
 
 .card-link a{
@@ -328,9 +482,9 @@ will-change: transform;        /* Example of <custom-ident> */
     border-radius: 9px;
 }
 
-.card-link a:hover {
+/* .card-link a:hover {
     letter-spacing: 2px;
-}
+} */
 
 .list-title {
 
@@ -363,6 +517,6 @@ will-change: transform;        /* Example of <custom-ident> */
     width: 90%;
 }
 
-.card-wrap:hover span  {
+/* .card-wrap:hover span  {
     letter-spacing: 2px;
-}
+} */
