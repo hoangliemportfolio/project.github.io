@@ -154,14 +154,14 @@ body {
 
 
 
-.list:hover .card-wrap img{
+/* .list:hover .card-wrap img{
     animation: fly2 ease-in-out 15s 1s infinite; 
 }
 .list:hover .card-wrap span{
     animation: fly3 ease-in-out 15s 1s infinite;
-}
+} */
 
-.list:hover .card-wrap img.style1{
+/* .list:hover .card-wrap img.style1{
     animation: fly2 ease-in-out 15s infinite;  
 }
 .list:hover .card-wrap span.style1{
@@ -187,8 +187,43 @@ body {
 }
 .list:hover .card-wrap span.style4{
     animation: fly3 ease-in-out 15s 0.3s infinite;
+} */
+
+.list .card-wrap img{
+    animation: fly2 ease-in-out 15s 2.5s infinite; 
+}
+.list .card-wrap span{
+    animation: fly3 ease-in-out 15s 2.5s infinite;
 }
 
+
+.list img.style1{
+    animation: fly2 ease-in-out 15s 1.5s infinite;  
+}
+.list .card-wrap span.style1{
+    animation: fly3 ease-in-out 15s 1.5s infinite;
+}
+
+.list img.style2{
+    animation: fly2 ease-in-out 15s 2s infinite;  
+}
+.list .card-wrap span.style2{
+    animation: fly3 ease-in-out 15s 2s infinite;
+}
+
+.list img.style3{
+    animation: fly2 ease-in-out 15s 1.7s infinite;  
+}
+.list .card-wrap span.style3{
+    animation: fly3 ease-in-out 15s 1.7s infinite;
+}
+
+.list img.style4{
+    animation: fly2 ease-in-out 15s 1.8s infinite;  
+}
+.list .card-wrap span.style4{
+    animation: fly3 ease-in-out 15s 1.8s infinite;
+}
 
 
 
