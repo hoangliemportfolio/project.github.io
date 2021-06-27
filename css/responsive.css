@@ -18,6 +18,7 @@
     .list {
         padding: 270px 0px 50px 0px;
         flex-wrap: wrap;
+        animation: appear2 ease-in-out 1.4s;
     }
 
     .flip-card-front,
