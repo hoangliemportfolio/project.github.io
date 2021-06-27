@@ -138,7 +138,7 @@ body {
     padding: 310px 100px 0 100px;
     box-sizing: border-box;
     width: 100%;
-    height: 700px;
+    height: 100%;
     justify-content: space-evenly;
     /* perspective: 1000px; */
     animation: appear1 ease-in-out 1.4s;
@@ -146,6 +146,7 @@ body {
     will-change: scroll-position;
     will-change: contents;
     will-change: transform; 
+    transition: ease-in-out 0.2s;
 }
 
 
