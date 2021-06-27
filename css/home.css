@@ -517,10 +517,14 @@ will-change: transform;        /* Example of <custom-ident> */
     text-decoration: none;
     font-family: Neucha;
     font-size: 2rem;
-    color: rgb(43, 43, 43);
+    color: rgb(68, 182, 2);
     transition: ease-in-out 0.3s;
     width: 90%;
     border-radius: 9px;
+}
+
+.card-link span {
+    color: rgb(66, 66, 66);
 }
 
 .card-link a:hover {
