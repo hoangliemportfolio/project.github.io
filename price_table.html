@@ -44,8 +44,10 @@
             
         </table>
         <div class="footer"><div  class="result">Sum: <div  id="total" ></div></div> <div class ='reset'>Reset</div></div>
-        
+        <audio class="decrease" src="./sound/single_coin_drop.mp3" controls>ee</audio>
+        <audio class="increase" src="./sound/cash_register.wav" controls>ee</audio>
     </div>
+  
 
     
 
@@ -62,8 +64,7 @@
                 var amount = parseInt(quanlity)*parseFloat(price.replaceAll('.',''));
                 table.rows[i].cells[4].innerText = amount;
                 total += amount;
-            }               
-         
+            }                            
         }
 
 // Chạy hàm để có giá mặc định
@@ -77,6 +78,10 @@
             total = 0;
             calculate();
             document.querySelector('#total').innerText = total;
+            var increase = document.querySelector('.increase');
+                increase.pause();
+                increase.currentTime = 0;
+                increase.play();
 
 // Reset
 
@@ -87,6 +92,8 @@ var reset = document.querySelector('.reset');
                 $('input').val(0);
                 calculate();   
                 document.querySelector('#total').innerText = 0;
+                var decrease = document.querySelector('.decrease');
+                decrease.play();
                      
         })
 
