@@ -25,7 +25,7 @@
         <div class="list">
             
            
-                <div class="card-wrap" onclick="this.classList.toggle('flip1');">
+                <div class="card-wrap" onclick="this.classList.toggle('flip1'); flipSound1.pause(); flipSound1.currentTime = 0; flipSound1.play()">
                     <div class="flip-card-front">
                         <img src="./img/card1-01.png" class="style1" alt="">
                     </div>
@@ -38,7 +38,7 @@
                 </div>
 
                 
-                <div class="card-wrap" onclick="this.classList.toggle('flip2');">
+                <div class="card-wrap" onclick="this.classList.toggle('flip2'); flipSound2.pause(); flipSound2.currentTime = 0; flipSound2.play()">
                     <div class="flip-card-front">
                         <img src="./img/card2-01.png" alt="">
                     </div>
@@ -51,7 +51,7 @@
                 </div>
 
                 
-                <div class="card-wrap" onclick="this.classList.toggle('flip3');">
+                <div class="card-wrap" onclick="this.classList.toggle('flip3'); flipSound3.pause(); flipSound3.currentTime = 0; flipSound3.play()">
                     <div class="flip-card-front">
                         <img src="./img/card3-01.png" class="style2" alt="">
                     </div>
@@ -64,7 +64,7 @@
                 </div>
 
                 
-                <div class="card-wrap" onclick="this.classList.toggle('flip4');">
+                <div class="card-wrap" onclick="this.classList.toggle('flip4'); flipSound4.pause(); flipSound4.currentTime = 0; flipSound4.play()">
                     <div class="flip-card-front">
                         <img src="./img/card1-01.png" class="style3" alt="">
                     </div>
@@ -77,7 +77,7 @@
                 </div>
 
                 
-                <div class="card-wrap" onclick="this.classList.toggle('flip5');">
+                <div class="card-wrap" onclick="this.classList.toggle('flip5'); flipSound5.pause(); flipSound5.currentTime = 0; flipSound5.play()">
                     <div class="flip-card-front">
                         <img src="./img/card2-01.png" class="style4" alt="">
                     </div>
@@ -96,11 +96,16 @@
                 
                 
                 
-   
+                <audio class="flipSound1" style="width:0; height:0" src="./sound/page-flip-02.mp3" controls></audio>
+                <audio class="flipSound2" style="width:0; height:0" src="./sound/page-flip-02.mp3" controls></audio>
+                <audio class="flipSound3" style="width:0; height:0" src="./sound/page-flip-02.mp3" controls></audio>
+                <audio class="flipSound4" style="width:0; height:0" src="./sound/page-flip-02.mp3" controls></audio>
+                <audio class="flipSound5" style="width:0; height:0" src="./sound/page-flip-02.mp3" controls></audio>
+                <audio allow="autoplay" autoplay="true" class="bgSound" style="width:0; height:0" src="./sound/harry_potter.mp3" controls></audio>
             
         </div>
     </div>
-
+    <script src="./js/jquery.js"></script>
     <script src="./js/js.js"></script>
 </body>
 </html>
