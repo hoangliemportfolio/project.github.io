@@ -4,7 +4,26 @@
  {
    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
  }
- 
+ .info__back {
+  position: absolute;
+  border-radius: 10px;
+  top: 20px;
+  left: 20px;
+}
+
+.info__back a {
+  font-size: 1rem;
+  background-color: rgb(0, 77, 77);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+.info__back a:hover {
+  background-color: teal;
+}
+
  #Username
  {
    border:none;
