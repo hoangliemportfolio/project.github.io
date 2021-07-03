@@ -301,6 +301,8 @@
       var ding = document.querySelector('.next')
       function takeData() {
         if (($("#Username").val().length == 0) || ($("#Numseats").val().length == 0)) {
+
+          $('.popup').removeClass('active');
           $('.popup').removeClass('active1');
           $('.popup').addClass('active');
           $('.popup-text').text('Nhập dô coi!')
@@ -350,6 +352,7 @@
         }
         else {
           if ($("input:checked").length == 0) {
+            $('.popup').removeClass('active');
             $('.popup').addClass('active');
             $('.popup').removeClass('active1');
             $('.popup-text').text("Sao hông chọn!")
@@ -361,6 +364,7 @@
             }, 1500)
           } else {
             if ($("input:checked").length < $("#Numseats").val()) {
+              $('.popup').removeClass('active');
               $('.popup').addClass('active');
               $('.popup').removeClass('active1');
               $('.popup-text').text("Mới có " + ($("input:checked").length) + " chỗ à!")
@@ -371,6 +375,7 @@
                 $('.popup').addClass('active1');
               }, 1500)
             } else {
+              $('.popup').removeClass('active');
               $('.popup').addClass('active');
               $('.popup').removeClass('active1');
               $('.popup-text').text("Chọn lố gòi!")
@@ -413,6 +418,7 @@ if ($("input:checked").length == ($("#Numseats").val())) {
 }
 else {
   if ($("input:checked").length == 0) {
+    $('.popup').removeClass('active');
     $('.popup').addClass('active');
     $('.popup').removeClass('active1');
     $('.popup-text').text("Sao hông chọn!")
@@ -424,6 +430,7 @@ else {
     }, 1500)
   } else {
     if ($("input:checked").length < $("#Numseats").val()) {
+      $('.popup').removeClass('active');
       $('.popup').addClass('active');
       $('.popup').removeClass('active1');
       $('.popup-text').text("Mới có " + ($("input:checked").length) + " chỗ à!")
@@ -434,6 +441,7 @@ else {
         $('.popup').addClass('active1');
       }, 1500)
     } else {
+      $('.popup').removeClass('active');
       $('.popup').addClass('active');
       $('.popup').removeClass('active1');
       $('.popup-text').text("Chọn lố gòi!")
@@ -456,6 +464,7 @@ else {
       reset.addEventListener('click', function () {
 
         if ($('#Username').val().length == 0 && $('#Numseats').val().length == 0) {
+          $('.popup').removeClass('active');
           $('.popup').addClass('active');
           $('.popup').removeClass('active1');
           $('.popup-text').text("Reset gòi!!")
@@ -515,7 +524,7 @@ else {
 
 
       $('#nameDisplay').change(function () {
-
+        $('.popup').removeClass('active');
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")
@@ -530,6 +539,7 @@ else {
       })
 
       $('#NumberDisplay').change(function () {
+        $('.popup').removeClass('active');
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")
@@ -543,6 +553,7 @@ else {
       })
 
       $('#seatsDisplay').change(function () {
+        $('.popup').removeClass('active');
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")

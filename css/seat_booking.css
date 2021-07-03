@@ -89,7 +89,7 @@
   font-size: 1.5rem;
   text-transform: uppercase;
   color: #2e2e2e;
-  bottom: 160px;
+  bottom: 150px;
 }
 
 .popup-img {
@@ -111,24 +111,24 @@
     opacity: 0;
   }
   80% {
-    transform: translateY(160px);
+    transform: translateY(130px);
     opacity: 1;
   }
   90% {
-    transform: translateY(145px);
+    transform: translateY(115px);
   }
   100% {
-    transform: translateY(150px);
+    transform: translateY(120px);
   }
 }
 
 @keyframes fly {
   0%{
-    transform: translateY(150px);
+    transform: translateY(120px);
     opacity: 1;
   }
   20% {
-    transform: translateY(160px);
+    transform: translateY(130px);
     opacity: 0;
   }
   100% {
@@ -144,7 +144,7 @@
  display: flex;
  justify-content: space-between;
  align-items: center;
- margin-top: 40px;
+ margin-top: 0px;
 }
 
 .container * {
