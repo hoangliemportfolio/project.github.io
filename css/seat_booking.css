@@ -526,7 +526,7 @@ input[type=checkbox]:checked:before {
   color: rgb(160, 252, 247);
   text-shadow: 0 0 10px rgba(175, 255, 235, 0.5);
   font-size: 1.5rem;
-  width: 200px;
+  width: 235px;
   border-bottom: 1px solid rgba(139, 139, 139,0.2);
   text-align: center;
   font-family: montserrat-regular;
