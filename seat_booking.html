@@ -16,7 +16,10 @@
         Trang chủ
     </a>
 </div>
-
+<div class="popup">
+  <!-- <img src="./img/annoying.jpg" alt="" class="popup-img"> -->
+  <span class="popup-text"></span>
+</div>
 <div class="title">SEAT BOOKING</div>
 <div class="container">
   <div class="info">
@@ -43,7 +46,7 @@
   
 
   <div class="seat-choosing">
-    <div class="seat-choosing-modal"></div>
+    <div class="seat-choosing-modal active"></div>
     <div class="form-title">Seat Structure</div>
     <table id="seatsBlock">       
        <tr>
@@ -244,7 +247,7 @@
   </div>
 
   <div class="result-display">
-    <div class="result-display-modal"></div>
+    <div class="result-display-modal active"></div>
     <div class="displayerBoxes">
     
       <div class="form-title">Seat Structure</div>
@@ -292,7 +295,15 @@ function takeData()
 {
   if (( $("#Username").val().length == 0 ) || ( $("#Numseats").val().length == 0 ))
   {
-  alert("Nhập dô coi!");
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text('Nhập dô coi!')
+
+
+     setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
   }
   else
   {
@@ -330,13 +341,34 @@ function updateTextArea() {
     }
   else
     {
-      alert("Chọn cho đủ " + ($("#Numseats").val()) + " chỗ coi!")
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Chọn cho đủ " + ($("#Numseats").val()) + " chỗ coi!")
+
+      setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
+      // alert("Chọn cho đủ " + ($("#Numseats").val()) + " chỗ coi!")
     }
   }
 
   // Reset--------------
   var reset = document.querySelector('.reset');
   reset.addEventListener('click', function() {
+
+    if($('#Username').val().length == 0 &&  $('#Numseats').val().length == 0) {
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Reset gòi!!")
+
+      setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
+     }
+
+
     $('.info-modal').removeClass('active');
     $('.seat-choosing-modal').addClass('active');
     $('.result-display-modal').addClass('active');
@@ -348,6 +380,10 @@ function updateTextArea() {
     $('#nameDisplay').val("");
      $('#NumberDisplay').val("");
      $('#seatsDisplay').val("");
+
+
+
+     
   })
 
 // Click info modal
@@ -384,17 +420,40 @@ function updateTextArea() {
 
 
     $('#nameDisplay').change(function(){
-      alert('Ai chơi sửa??')
+
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Ai chơi sửa??")
+
+      setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
+
       updateTextArea()
     })
 
     $('#NumberDisplay').change(function(){
-      alert('Ai chơi sửa??')
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Ai chơi sửa??")
+
+      setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
       updateTextArea()
     })
 
     $('#seatsDisplay').change(function(){
-      alert('Ai chơi sửa??')
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Ai chơi sửa??")
+
+      setTimeout(function(){
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+     }, 1500)
       updateTextArea()
     })
 
