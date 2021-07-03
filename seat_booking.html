@@ -277,6 +277,8 @@
       </div>
     </div>
     <div class="reset-div"><button class="reset">Reset</button></div>
+    <audio class="checkSound" style="width:0; height:0" src="./sound/check.mp3" controls></audio>
+    <audio class="notificationDrop" style="width:0; height:0" src="./sound/notification_drop_down.wav" controls></audio>
 
 
 
@@ -293,11 +295,16 @@
         $('.result-display-modal').addClass('active');
 
       }
+
+      var dropSound = document.querySelector('.notificationDrop')
       function takeData() {
         if (($("#Username").val().length == 0) || ($("#Numseats").val().length == 0)) {
-          $('.popup').addClass('active');
           $('.popup').removeClass('active1');
+          $('.popup').addClass('active');
           $('.popup-text').text('Nhập dô coi!')
+          // dropSound.pause();
+          // dropSound.currentTime = 0;
+          dropSound.play()
 
 
           setTimeout(function () {
@@ -342,6 +349,7 @@
             $('.popup').addClass('active');
             $('.popup').removeClass('active1');
             $('.popup-text').text("Sao hông chọn!")
+            dropSound.play()
 
             setTimeout(function () {
               $('.popup').removeClass('active');
@@ -352,6 +360,7 @@
               $('.popup').addClass('active');
               $('.popup').removeClass('active1');
               $('.popup-text').text("Mới có " + ($("input:checked").length) + " chỗ à!")
+              dropSound.play()
 
               setTimeout(function () {
                 $('.popup').removeClass('active');
@@ -361,6 +370,7 @@
               $('.popup').addClass('active');
               $('.popup').removeClass('active1');
               $('.popup-text').text("Chọn lố gòi!")
+              dropSound.play()
 
               setTimeout(function () {
                 $('.popup').removeClass('active');
@@ -381,6 +391,7 @@
           $('.popup').addClass('active');
           $('.popup').removeClass('active1');
           $('.popup-text').text("Reset gòi!!")
+          dropSound.play()
 
           setTimeout(function () {
             $('.popup').removeClass('active');
@@ -440,6 +451,7 @@
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")
+        dropSound.play()
 
         setTimeout(function () {
           $('.popup').removeClass('active');
@@ -453,6 +465,7 @@
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")
+        dropSound.play()
 
         setTimeout(function () {
           $('.popup').removeClass('active');
@@ -465,12 +478,21 @@
         $('.popup').addClass('active');
         $('.popup').removeClass('active1');
         $('.popup-text').text("Ai chơi sửa??")
+        dropSound.play()
 
         setTimeout(function () {
           $('.popup').removeClass('active');
           $('.popup').addClass('active1');
         }, 1500)
         updateTextArea()
+      })
+
+
+      $('.seats').change(function(){
+        var checkSound = document.querySelector('.checkSound')
+        checkSound.pause();
+        checkSound.currentTime = 0;
+        checkSound.play()
       })
 
 
