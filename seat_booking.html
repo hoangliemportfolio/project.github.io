@@ -279,6 +279,7 @@
     <div class="reset-div"><button class="reset">Reset</button></div>
     <audio class="checkSound" style="width:0; height:0" src="./sound/check.mp3" controls></audio>
     <audio class="notificationDrop" style="width:0; height:0" src="./sound/notification_drop_down.wav" controls></audio>
+    <audio class="next" style="width:0; height:0" src="./sound/mario coin.wav" controls></audio>
 
 
 
@@ -297,6 +298,7 @@
       }
 
       var dropSound = document.querySelector('.notificationDrop')
+      var ding = document.querySelector('.next')
       function takeData() {
         if (($("#Username").val().length == 0) || ($("#Numseats").val().length == 0)) {
           $('.popup').removeClass('active1');
@@ -317,6 +319,7 @@
           // $(".seatStructure *").prop("disabled", false);
           $('.seat-choosing-modal').removeClass('active');
           $('.info-modal').addClass('active');
+          ding.play()
         }
       }
 
@@ -343,6 +346,7 @@
           $('#nameDisplay').val(allNameVals);
           $('#NumberDisplay').val(allNumberVals);
           $('#seatsDisplay').val(allSeatsVals);
+           ding.play()
         }
         else {
           if ($("input:checked").length == 0) {
@@ -383,6 +387,70 @@
         }
       }
 
+
+      function updateTextArea1() {
+
+if ($("input:checked").length == ($("#Numseats").val())) {
+  // $(".seatStructure *").prop("disabled", true);
+  $('.result-display-modal').removeClass('active');
+  $('.seat-choosing-modal').addClass('active');
+
+  var allNameVals = [];
+  var allNumberVals = [];
+  var allSeatsVals = [];
+
+  //Storing in Array
+  allNameVals.push($("#Username").val());
+  allNumberVals.push($("#Numseats").val());
+  $('#seatsBlock :checked').each(function () {
+    allSeatsVals.push(" " + ($(this).val()));
+  });
+
+  //Displaying 
+  $('#nameDisplay').val(allNameVals);
+  $('#NumberDisplay').val(allNumberVals);
+  $('#seatsDisplay').val(allSeatsVals);
+}
+else {
+  if ($("input:checked").length == 0) {
+    $('.popup').addClass('active');
+    $('.popup').removeClass('active1');
+    $('.popup-text').text("Sao hông chọn!")
+    dropSound.play()
+
+    setTimeout(function () {
+      $('.popup').removeClass('active');
+      $('.popup').addClass('active1');
+    }, 1500)
+  } else {
+    if ($("input:checked").length < $("#Numseats").val()) {
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Mới có " + ($("input:checked").length) + " chỗ à!")
+      dropSound.play()
+
+      setTimeout(function () {
+        $('.popup').removeClass('active');
+        $('.popup').addClass('active1');
+      }, 1500)
+    } else {
+      $('.popup').addClass('active');
+      $('.popup').removeClass('active1');
+      $('.popup-text').text("Chọn lố gòi!")
+      dropSound.play()
+
+      setTimeout(function () {
+        $('.popup').removeClass('active');
+        $('.popup').addClass('active1');
+      }, 1500)
+    }
+  };
+
+
+}
+}
+
+      
       // Reset--------------
       var reset = document.querySelector('.reset');
       reset.addEventListener('click', function () {
@@ -458,7 +526,7 @@
           $('.popup').addClass('active1');
         }, 1500);
     
-        updateTextArea()
+        updateTextArea1()
       })
 
       $('#NumberDisplay').change(function () {
@@ -471,7 +539,7 @@
           $('.popup').removeClass('active');
           $('.popup').addClass('active1');
         }, 1500)
-        updateTextArea()
+        updateTextArea1()
       })
 
       $('#seatsDisplay').change(function () {
@@ -484,7 +552,7 @@
           $('.popup').removeClass('active');
           $('.popup').addClass('active1');
         }, 1500)
-        updateTextArea()
+        updateTextArea1()
       })
 
 
