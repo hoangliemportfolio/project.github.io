@@ -498,6 +498,11 @@ input[type=checkbox]:checked:before {
   height: 100px;
   margin-bottom: 20px;
   transition: ease-out 0.3s;
+ 
+}
+
+.Displaytable tbody tr {
+  margin: 0 25px 20px 25px;
 }
 
 .Displaytable tr:hover {
