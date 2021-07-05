@@ -566,3 +566,67 @@ input[type=checkbox]:checked:before {
               inset 0px 0px 10px rgba(253, 167, 167, 0.5) ;
               opacity: 1;
 }
+
+
+
+
+
+
+
+
+@media (max-width: 1150px) {
+
+  .seat-choosing {
+    width: 475px;
+  }
+
+  .info {
+    width: 257px;
+  }
+
+  .result-display {
+    width: 257px;
+  }
+
+  .form-name input {
+    width: 150px;
+  }
+
+  .form-quanlity input {
+    width: 150px;
+  }
+
+  .form-name span {
+    font-size: 1.2rem;
+  }
+
+  .form-quanlity span {
+    font-size: 1.2rem;
+  }
+
+  .result-display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .displayerBoxes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Displaytable textarea {
+    width: 150px;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .reset-div {
+    left: unset;
+  }
+}
