@@ -9,44 +9,84 @@
 </head>
 <body>
     <div class="container">
+        
         <div class="info__back">
             <a href="./index.html" class="info__back-link">
                 Trang chủ
             </a>
         </div>
-        <form action="">
-            
-            <div class="name item">
-                <label for="" class="title">Tên đăng nhập</label>
-                <input type="text" placeholder="Nhập tên" id="name">
-                <label for="">*</label>
-            </div>
-            <div class="password item">
-                <label for="" class="title">Mật khẩu</label>
-                <input type="password" placeholder="Nhập mật khẩu" id="password">
-                <label for="">*</label>
+        <div class="popup">
+            <span class="popup-text"></span>
+          </div>
+        <div class="form">
+            <form action="">
+                <div class="main-title">login form</div>
+                <div class="name item">
+                    <label for="" class="title">Tên đăng nhập</label>
+                    <div class="input">
+                        <input type="text" autocomplete="off" id="name">
+                        <label for="">*</label>
+                    </div>
+                   
+                </div>
+                <div class="password item">
+                    <label for="" class="title">Mật khẩu</label>
+                    <div class="input">
+                        <input type="password" autocomplete="off" id="password">
+                        <label for="">*</label>
+                    </div>
+                   
+                    
+                </div>
                 <label for="" class="forget"><a href="">* Quên mật khẩu hả?</a></label>
-            </div>
-            <div class="submit">
-                <button type="submit" id="submit" onclick="dangNhap()">Submit</button>
-                <input type="checkbox" class="checkbox">
-                <label for="" class="checkbox_text">Lưu đăng nhập</label>
-            </div>
-        </form>
+                <div class="submit">
+                    <div id="submit" onclick="dangNhap()">Submit</div>
+                    <div class="input save">
+                        <input type="checkbox" class="checkbox">
+                        <label for="" class="checkbox_text">Lưu đăng nhập</label>
+                    </div>
+                   
+                </div>
+            </form>
+            <audio class="notificationDrop" style="width:0; height:0" src="./sound/notification_drop_down.wav" controls></audio>
+            <audio class="next" style="width:0; height:0" src="./sound/mario coin.wav" controls></audio>
+        </div>
+        
     </div>
 
-
+    <script src="./js/jquery.js"></script>
     <script>
-        var namee = document.querySelector('#name')
-        var password = document.querySelector('#password')
+        var dropSound = document.querySelector('.notificationDrop')
+        var ding = document.querySelector('.next')
 
+        // Hàm pop-up-------------------
+        function popUp(text, sound) {
+                $('.popup').removeClass('active1');
+                $('.popup').addClass('active');
+                $('.popup-text').text(text)
+                sound.play()
+
+                setTimeout(function () {
+                    $('.popup').removeClass('active');
+                    $('.popup').addClass('active1');
+                }, 1500)
+        }
+
+
+        // Hàm đăng nhập ----------------
         function dangNhap() {
-            if ( namee.value == 'admin' && password.value == 'admin') {
-                alert('OKE')
+            if (($('#name').val() == 'admin') && ($('#password').val() == 'admin')) {
+                popUp('Đúng ời!',ding)
+                $('.forget').removeClass('active')
             } else {
-                alert('Đăng nhập không được!')
+                popUp('Sai gòi!',dropSound)
+                $('.forget').removeClass('active')
+                setTimeout(function(){
+                    $('.forget').addClass('active')
+                }, 500)
+               
             }
-        } 
+        }
     </script>
 </body>
 </html>
