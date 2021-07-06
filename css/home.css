@@ -588,3 +588,13 @@ will-change: transform;        /* Example of <custom-ident> */
 /* .card-wrap:hover span  {
     letter-spacing: 2px;
 } */
+
+
+.card-wrap div img,.flip-card-back img {
+    width: 110px;
+    height: 160px;
+}
+
+.card-content {
+    font-size: 1.3rem;
+}

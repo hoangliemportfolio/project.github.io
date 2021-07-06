@@ -1,0 +1,91 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: Quicksand;
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url(../fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+    font-family: Qahiri;
+    src: url(../fonts/Qahiri-Regular.ttf);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.container__title {
+    font-size: 2.5rem;
+    color: rgb(37, 37, 37);
+    margin: 30px 0 50px 0;
+}
+
+.course {
+    padding: 10px;
+background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(124, 124, 124, 0.9);
+    position: relative;
+    margin: 30px 40px;
+}
+
+.course img {
+    width: 90%;
+    height: 130px;
+    position: absolute;
+    top: -15px;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(124, 124, 124, 0.9);
+}
+
+.course__content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 120px;
+}
+
+.course__content-text {
+    font-size: 1.3rem;
+    color: rgb(37, 37, 37);
+}
+
+.course__time {
+    margin-top: 10px;
+    border-top: 1px solid #ccc;
+    width: 100%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.container__courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.course__content-link {
+    color: brown;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+

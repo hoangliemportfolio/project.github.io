@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khóa học</title>
+    <link rel="stylesheet" href="./css/courses.css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__title">Các khóa học sắp khai giảng</div>
+        <div class="container__courses">
+            <!-- <div class="course">
+                <img src="./img/ezreal.jpg" alt="" class="course__img">
+                <div class="course__content">
+                    <span class="course__content-link">khfwe</span>
+                    <span class="course__content-text">Khóa học nhập môn autoCAD</span>
+                </div>
+                <span class="course__time">17/07/2020</span>
+            </div>  -->
+
+
+            <script type="text/javascript"  >
+                var container__courses = document.querySelector('.container__courses')
+                var coursesList = [];
+        
+        
+                var course = [
+                    {
+                        "img": "./img/autocad.png",
+                        "link": 'Kỹ thuật, khóa học',
+                        "text": 'Khóa học nhập môn AutoCAD, 2D căn bản',
+                        "time": "17h30 - 17/07/2021 "
+                    },
+                    {
+                        "img": "./img/vue.png",
+                        "link": 'Khóa học, CNTT',
+                        "text": 'Khóa học lập trình web Vue.js căn bản',
+                        "time": "19h30 - 15/07/2021 "
+                    },
+                    {
+                        "img": "./img/photoshop-ai.png",
+                        "link": 'Thiết kế - Đồ họa, khóa học, Outdoor',
+                        "text": 'Khóa học đồ họa Photoshop và Illustrator',
+                        "time": "17h30 - 10/07/2021"
+                    },
+                    {
+                        "img": "./img/photoshop-ai.png",
+                        "link": 'Thiết kế - Đồ họa, khóa học, Outdoor',
+                        "text": 'Khóa học đồ họa Photoshop và Illustrator',
+                        "time": "17h30 - 10/07/2021"
+                    },
+                    {
+                        "img": "./img/autocad.png",
+                        "link": 'Kỹ thuật, khóa học',
+                        "text": 'Khóa học nhập môn AutoCAD, 2D căn bản',
+                        "time": "17h30 - 17/07/2021 "
+                    },
+                    {
+                        "img": "./img/vue.png",
+                        "link": 'Khóa học, CNTT',
+                        "text": 'Khóa học lập trình web Vue.js căn bản',
+                        "time": "19h30 - 15/07/2021 "
+                    },
+                    {
+                        "img": "./img/photoshop-ai.png",
+                        "link": 'Thiết kế - Đồ họa, khóa học, Outdoor',
+                        "text": 'Khóa học đồ họa Photoshop và Illustrator',
+                        "time": "17h30 - 10/07/2021"
+                    }
+                    
+                ]
+        
+        
+                for( var i = 0; i < course.length; i++ ) {         
+                    coursesList.push(course[i])    
+                }
+        
+        
+        
+                for( var i = 0; i < coursesList.length; i++ ) {
+                    document.writeln(
+                        `<div class="course">
+                            <img src="${coursesList[i].img}" alt="" class="course__img">
+                            <div class="course__content">
+                                <span class="course__content-link">${coursesList[i].link}</span>
+                                <span class="course__content-text">${coursesList[i].text}</span>
+                            </div>
+                                <span class="course__time">${coursesList[i].time}</span>
+                            </div> 
+                        </div>`
+                    )
+                }
+            </script>
+
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
