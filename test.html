@@ -1,55 +1,46 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Danh sách sinh viên </title>
-	<meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="./css/test.css">
 </head>
 <body>
-<!--
-- Tạo ngẫu nhiên 10 sinh viên
-- Mỗi sinh viên gồm các thuộc tính sau (tên, tuổi, email, địa chỉ)
-- Hiển thị kết quả ra 1 table
--->
-	<table width="100%" border="1" cellspacing="3" cellpadding="3">
-		<thead>
-			<th>STT</th>
-			<th>Tên</th>
-			<th>Tuổi</th>
-			<th>Email</th>
-			<th>Địa chỉ</th>
-		</thead>
-		<tbody>
-<script type="text/javascript">
-	var studentList = []
-	for(i=0;i<10;i++) {
-		var student = {
-			"Name": "Sinh viên " + 1,
-			"Age": 21,
-			"email": i + "@gmail.com",
-			"Address": "Cần Thơ "
-		}
-		studentList.push(student)
-	}
-	for(i=0;i<studentList.length;i++) {
+	<div id="pic1" class="bg-holder" data-width="1024" data-height="500">
+		<div class="content">
+			<p class="haha">fjeifjewofj eofjewoifjoeifjewoifj fejowifjeiofjeiowfj ewoifjweoifj</p>
+		</div>
+	</div>
 
-		document.writeln(`<tr>
-				<td>${i+1}</td>
-				<td>${studentList[i].Name}</td>
-				<td>${studentList[i].Age}</td>
-				<td>${studentList[i].Email}</td>
-				<td>${studentList[i].Address}</td>
-			</tr>`)
+<section>
+  <p>Content that "slides" over the bacffffffkgrounds</p>
+</section>
 
-		// document.writeln('<tr>'+
-		// 		'<td>'+(i+1)+'</td>'+
-		// 		'<td>'+studentList[i].Name+'</td>'+
-		// 		'<td>'+studentList[i].age+'</td>'+
-		// 		'<td>'+studentList[i].email+'</td>'+
-		// 		'<td>'+studentList[i].address+'</td>'+
-		// 	'</tr>')
-	}
+<div id="pic2" class="bg-holder" data-width="1024" data-height="500">
+  <div class="content">
+	  <p>fjeifjewofj eofjewoifjoeifjewoifj fejowifjeiofjeiowfj ewoifjweoifj</p>
+  </div>
+</div>
+<div id="pic2" class="bg-holder" data-width="1024" data-height="500">
+	<div class="content">
+		<p>fjeifjewofj eofjewoifjoeifjewoifj fejowifjeiofjeiowfj ewoifjweoifj</p>
+	</div>
+  </div>
+  <div id="pic2" class="bg-holder" data-width="1024" data-height="500">
+	<div class="content">
+		<p>fjeifjewofj eofjewoifjoeifjewoifj fejowifjeiofjeiowfj ewoifjweoifj</p>
+	</div>
+  </div>
+
+
+<script src="./js/jquery.js"></script>
+<script src="./js/Parallax-Scroll-master/src/jquery.parallax-scroll.js"></script>
+<script>
+	$('.bg-holder').parallaxScroll({
+  friction: 0.5
+});
 </script>
-		</tbody>
-	</table>
 </body>
 </html>
